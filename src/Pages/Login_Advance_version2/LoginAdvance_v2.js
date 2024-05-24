@@ -9,7 +9,7 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 const LoginAdvance_v2 = () => {
 	
 	const backgroundImageStyle = {
-		backgroundImage: `url(${process.env.REACT_APP_PUBLIC_FOLDER}bg_LoginAdvance_v2.jpg)`,
+		backgroundImage: `url(${process.env.REACT_APP_PUBLIC_FOLDER}/bg_LoginAdvance_v2.jpg)`,
 	};
 	const [isFormLogin, setIsFormLogin] = useState(false);
 	const [account,setAccount]=useState({});

@@ -9,6 +9,7 @@ function App() {
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Home />} />
+				<Route path="/Practive_ReactJs" element={<Home/>} />
 				{lists.map((item, index) => {
 					return (
 						<Route
