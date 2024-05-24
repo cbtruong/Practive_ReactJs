@@ -1,0 +1,147 @@
+.todo-app {
+	background: rgb(28, 27, 27);
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	color: white;
+	h1 {
+		background: linear-gradient(to left,#9400D3,#fffb00);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color:transparent ;
+		font-size: 3rem;
+		text-align: center;
+		margin-top: 4%;
+	}
+	.todo-wrapper {
+		animation: todosApp 1s;
+		background: rgb(60, 58, 58);
+		padding: 2%;
+		width: fit-content;
+		margin: 2% auto;
+		max-height: 85%;
+		overflow-y: auto;
+		box-shadow: 0 0 7px rgb(49, 49, 49);
+	}
+	.todo-input {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-bottom: 1px solid rgb(84, 84, 84);
+		padding-bottom: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+	.todo-input-item {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-right: 1.5rem;
+	}
+	.todo-input-item label {
+		font-weight: bold;
+		margin-bottom: 0.6rem;
+	}
+	.todo-input-item input {
+		padding: 0.5rem;
+		border: none;
+		width: 250px;
+	}
+	.todo-input-item input:focus {
+		outline: 2px solid rgb(180, 97, 239);
+	}
+	.primary-btn {
+		background: rgb(180, 97, 239);
+		color: white;
+		border: none;
+		border-radius: 5px;
+		margin-top: 30px;
+		padding: 10px;
+		width: 60px;
+		cursor: pointer;
+	}
+	.primary-btn:hover {
+		background-color: rgb(156, 55, 229);
+		transform: translateY(-2px) translateX(2px);
+	}
+	.primary-btn:active{
+		transform: translateY(2px);
+	}
+
+	.secondary-btn {
+		background-color: rgb(73, 73, 73);
+		color: white;
+		border: none;
+		padding: 10px;
+		border-radius: 1px;
+		margin-top: 25px;
+		width: fit-content;
+		cursor: pointer;
+	}
+	.active {
+		background-color: rgb(156, 55, 229);
+	}
+	.todo-list-item {
+		background-color: rgb(73, 73, 73);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 25px;
+		padding-bottom: 15px;
+		padding-top: 10px;
+		margin-bottom: 10px;
+		box-shadow: 0 0 5px rgb(48, 47, 47);
+	}
+	.todo-list-item h3 {
+		font-size: 25px;
+		color: rgb(190, 127, 234);
+		font-weight: bold;
+	}
+	.todo-input-item p {
+		font-size: 14px;
+		color: rgb(161, 161, 161);
+		margin-top: 8px;
+	}
+	.icon {
+		font-size: 35px;
+		cursor: pointer;
+	}
+	.icon:hover {
+		color: red;
+	}
+	.check-icon {
+		color: rgb(156, 55, 229);
+		font-size: 25px;
+		margin-left: 10px;
+		cursor: pointer;
+	}
+	.check-icon:hover {
+		color: rgb(206, 156, 241);
+	}
+    .edit-wrapper{
+        background: #414040;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .edit-wrapper input,
+    .edit-wrapper textarea{
+        border: 1px solid lightgray;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 3px;
+    }
+    .edit-wrapper .primary-btn{
+        margin: auto;
+        padding: 10px;
+        font-size: 16px;
+        width: fit-content;
+    }
+	
+}
+@keyframes todosApp {
+	0%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1);
+	}
+}

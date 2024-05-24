@@ -1,0 +1,116 @@
+:root{
+    --digital-clock:1rem;
+}
+.digital_clock{
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .wrapper{
+        width: 35%;
+        height: 20%;
+        background: linear-gradient(to left,rgb(84, 84, 255),rgb(255, 77, 77),yellow);
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius:10px ;
+        animation: digitalclock 1.5s  linear infinite;
+    }
+    .wrapper .display{
+        width: 90%;
+        height: 75%;
+        background-color: rgb(33, 33, 33);
+        border-radius: 5px;
+        text-align: center;
+        letter-spacing:calc( var(--digital-clock)*0.5);
+        color: black;
+    }
+    .wrapper .display p{
+        margin-top: calc( var(--digital-clock)*1);
+        font-size: calc( var(--digital-clock)*3);
+        font-weight: bold;
+        background: linear-gradient(to left,rgb(84, 84, 255),rgb(255, 77, 77),yellow);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+    }
+}
+@keyframes digitalclock {
+    100%{
+        filter:hue-rotate(360deg);
+    }
+    
+}
+@media (max-width: 1248px) {
+    :root{
+        --digital-clock:0.8rem;
+    }
+    
+}
+@media (max-width: 1024px) {
+    :root{
+        --digital-clock:0.7rem;
+    }
+    .digital_clock .wrapper{
+        width: 40%;
+    }
+    .digital_clock .wrapper .display p
+    {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 868px) {
+    :root{
+        --digital-clock:0.55rem;
+    }
+    .digital_clock .wrapper{
+        width: 40%;
+        height: 10%;
+    }
+    .digital_clock .wrapper .display p
+    {
+        margin-top: 25px;
+    }
+}
+@media (max-width: 768px) {
+    :root{
+        --digital-clock:0.45rem;
+    }
+    .digital_clock .wrapper{
+        width: 40%;
+        height: 12%;
+    }
+    .digital_clock .wrapper .display p
+    {
+        margin-top: 25px;
+    }
+}
+@media (max-width: 480px) {
+    :root{
+        --digital-clock:0.3rem;
+    }
+    .digital_clock .wrapper{
+        width: 40%;
+        height: 10%;
+    }
+    .digital_clock .wrapper .display p
+    {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 380px) {
+    :root{
+        --digital-clock:0.3rem;
+    }
+    .digital_clock .wrapper{
+        width: 40%;
+        height: 10%;
+    }
+    .digital_clock .wrapper .display p
+    {
+        margin-top: 13px;
+    }
+}
